@@ -4,7 +4,9 @@ Guidelines for AI agents working with Earned Media Skills by 701am.
 
 ## Repository Overview
 
-This repository contains **Agent Skills** for earned media, PR, and journalist outreach — built for AI agents using Claude Code, Claude Cowork, or any agent that supports the Agent Skills format.
+This repository contains **Agent Skills** for earned media, PR, and journalist outreach — built for AI agents using [OpenCode](https://opencode.ai), Claude Code, Claude Cowork, or any agent that supports the Agent Skills format.
+
+Skills are pre-configured for OpenCode: `opencode.json` enables `websearch`/`webfetch` tools and allows all skills. The `.opencode/skills/` symlink makes all 28 skills discoverable out of the box. Just `cd` into the directory and run `opencode`.
 
 - **Name**: Earned Media Skills
 - **Publisher**: 701am
@@ -25,8 +27,9 @@ earned-media-skills/
 │   ├── README.md
 │   ├── walter-code/               # Per-client memory files
 │   └── portfolio/                 # Portfolio manager vault
-├── AGENTS.md                      # This file
-├── CLAUDE.md                      # Symlink → AGENTS.md
+├── opencode.json                   # OpenCode project config
+├── .opencode/skills/               # Symlink → skills/ for OpenCode discovery
+├── AGENTS.md                      # This file (also CLAUDE.md → AGENTS.md)
 ├── CONTRIBUTING.md
 ├── LICENSE
 └── README.md

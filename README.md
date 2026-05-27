@@ -1,7 +1,7 @@
 # Earned Media Skills
 **AI agent skills for PR, journalist outreach, and earned media. By 701am.**
 
-28 skills covering the full earned media workflow — from building client context to pitching journalists, managing follow-ups, monitoring the news cycle, and delivering client reports. Works with Claude Code, Claude Cowork, and any agent that supports the Agent Skills format.
+28 skills covering the full earned media workflow — from building client context to pitching journalists, managing follow-ups, monitoring the news cycle, and delivering client reports. Works with [OpenCode](https://opencode.ai) (free — no API key needed), Claude Code, Claude Cowork, and any agent that supports the Agent Skills format.
 
 ---
 
@@ -52,18 +52,35 @@ Two things happen before any output reaches a journalist.
 
 ### Installation
 
-Clone and copy:
+**OpenCode** — clone and open (free, no API key required):
+```bash
+git clone https://github.com/701am/earned-media-skills.git
+cd earned-media-skills
+opencode
+```
+
+OpenCode comes with **free built-in models** — no API key, no credit card, no setup. Just install and run. The free models are perfectly capable of running all 28 skills: they handle long-form strategy docs, research journalist beats, write targeted pitches, and apply the humanizer. Zero-cost, full capability.
+
+OpenCode discovers all 28 skills automatically via `.opencode/skills/`. Web search and fetch are pre-enabled in `opencode.json` so skills like `journalist-research`, `monitor`, and `newsjacking` can go online.
+
+**Claude Code** — clone and run:
+```bash
+git clone https://github.com/701am/earned-media-skills.git
+cd earned-media-skills
+claude
+```
+`CLAUDE.md` is a symlink to `AGENTS.md` — Claude picks up the instructions automatically.
+
+**Or copy skills into any project:**
 ```bash
 git clone https://github.com/701am/earned-media-skills.git
 cp -r earned-media-skills/skills/* .agents/skills/
 ```
 
-Or as a submodule:
+**Or as a submodule:**
 ```bash
 git submodule add https://github.com/701am/earned-media-skills.git .agents/earned-media-skills
 ```
-
-Or clone anywhere and open Claude Code from that folder — skills work as long as Claude can read the files.
 
 ### First session
 
